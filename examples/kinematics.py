@@ -16,7 +16,7 @@ from kinax.kinematics import forward
 
 if __name__ == "__main__":
 
-    sys = kinax.load_model(BAXTER)
+    sys = kinax.load_model(FRANKA_PANDA_NO_GRIPPER)
     print('link_names: ', sys.link_names)
     print('link_parents: ', sys.link_parents)
     print('joint_ids: ', sys.joint_ids)
@@ -58,4 +58,5 @@ if __name__ == "__main__":
     fig, ax = plt.subplots(1, 1, subplot_kw=dict(projection='3d'))
     skeleton.draw_skeleton(ax=ax)
     skeleton_ik.draw_skeleton(ax=ax, c='r')
+    ax.set_aspect('equal')
     plt.show()
