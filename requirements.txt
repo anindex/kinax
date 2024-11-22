@@ -1,0 +1,10 @@
+numpy
+matplotlib
+scipy
+tqdm
+setuptools
+jax
+pytest
+pyyaml
+brax
+urdf-parser-py
