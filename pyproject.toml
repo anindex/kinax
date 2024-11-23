@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools >= 64.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+dynamic = ["version"]
+
+name = "kinax"
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "tqdm",
+  "jax",
+  "pyyaml",
+  "brax",
+  "urdf-parser-py",
+]
+requires-python = ">= 3.8"
+
+authors = [
+  {name = "An T. Le", email = "an.thai.le97@gmail.com"},
+]
+description = "FK, IK, using brax backend and JAX"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["FK", "IK", "URDF", "JAX", "brax"]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+]
+
+[project.urls]
+Homepage = "https://sites.google.com/view/gtmp/home"
