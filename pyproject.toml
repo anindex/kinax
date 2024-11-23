@@ -2,6 +2,9 @@
 requires = ["setuptools >= 64.0"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+py-modules = []
+
 
 [project]
 dynamic = ["version"]
@@ -36,6 +39,11 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["kinax"]  # package names should match these glob patterns (["*"] by default)
+exclude = []  # exclude packages matching these glob patterns (empty by default)
 
 [project.urls]
 Homepage = "https://sites.google.com/view/gtmp/home"
