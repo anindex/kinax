@@ -1,1 +1,1 @@
-from .urdf import load_model 
+from kinax.urdf import load_model 
