@@ -11,7 +11,7 @@ dynamic = ["version"]
 
 name = "kinax"
 dependencies = [
-  "numpy",
+  "numpy<2.0",
   "matplotlib",
   "scipy",
   "tqdm",
