@@ -9,14 +9,14 @@ import time
 from brax.kinematics import world_to_joint, inverse
 
 import kinax
-from kinax.model import FRANKA_PANDA_NO_GRIPPER, FRANKA_PANDA, UR10, UR10_SUCTION, TIAGO_DUAL_HOLO, SHADOW_HAND, ALLEGRO_HAND, PLANAR_2_LINK, BAXTER
+from kinax.model import FRANKA_PANDA_NO_GRIPPER, TIAGO_DUAL_WHEEL, FRANKA_PANDA, UR10, UR10_SUCTION, TIAGO_DUAL_HOLO, SHADOW_HAND, ALLEGRO_HAND, PLANAR_2_LINK, BAXTER
 from kinax.skeleton import get_skeleton_from_system
 from kinax.kinematics import forward
 
 
 if __name__ == "__main__":
 
-    sys = kinax.load_model(FRANKA_PANDA_NO_GRIPPER)
+    sys = kinax.load_model(TIAGO_DUAL_WHEEL)
     print('link_names: ', sys.link_names)
     print('link_parents: ', sys.link_parents)
     print('joint_ids: ', sys.joint_ids)

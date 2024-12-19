@@ -82,9 +82,14 @@ def load_model(model_path: str) -> URDFSystem:
             joint_limits.append([0., 0.])
             joint_limit_velocities.append([0.])
         else:
-            joint_limit_efforts.append([joint.limit.effort])
-            joint_limits.append([joint.limit.lower, joint.limit.upper])
-            joint_limit_velocities.append([joint.limit.velocity])
+            if joint.limit is None:
+                joint_limit_efforts.append([0.])
+                joint_limits.append([-np.inf, np.inf])
+                joint_limit_velocities.append([np.inf])
+            else:
+                joint_limit_efforts.append([joint.limit.effort])
+                joint_limits.append([joint.limit.lower, joint.limit.upper])
+                joint_limit_velocities.append([joint.limit.velocity])
         if joint.dynamics is None:
             joint_damping.append([1.])
             joint_friction.append([1.])
